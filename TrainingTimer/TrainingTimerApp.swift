@@ -11,7 +11,7 @@ import SwiftUI
 struct TrainingTimerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EMOMContentView()
         }
     }
 }
