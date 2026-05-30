@@ -12,13 +12,21 @@ struct TrainingTimerApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                EMOMContentView()
+                EMOMContentView(totalSets: 10)
                     .tabItem {
                         Label("EMOM10", systemImage: "clock")
+                    }
+                EMOMContentView(totalSets: 20)
+                    .tabItem {
+                        Label("EMOM20", systemImage: "clock")
                     }
                 ContentView()
                     .tabItem {
                         Label("Timer", systemImage: "clock")
+                    }
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
                     }
             }
         }
