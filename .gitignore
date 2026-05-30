@@ -1,0 +1,37 @@
+# macOS System & Hidden Files
+.DS_Store
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Xcode & Derived Data
+build/
+DerivedData/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# CocoaPods (Uncomment if you don't commit dependencies)
+# Pods/
+
+# Carthage
+# Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Other miscellaneous files
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
