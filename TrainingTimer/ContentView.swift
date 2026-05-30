@@ -56,6 +56,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EMOMContentView(totalSets: 10)
+        EMOMView(totalSets: 10)
     }
 }

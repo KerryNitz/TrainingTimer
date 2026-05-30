@@ -1,5 +1,5 @@
 //
-//  TUTContentView.swift
+//  TUTView.swift
 //  TrainingTimer
 //
 //  Created by Kerry Nitz on 30/05/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TUTContentView: View {
+struct TUTView: View {
     @StateObject private var vm = TUTViewModel()
     let totalSets: Int
     let activeTime: Int
@@ -70,8 +70,8 @@ struct TUTContentView: View {
     }
 }
 
-struct TUTContentView_Previews: PreviewProvider {
+struct TUTView_Previews: PreviewProvider {
     static var previews: some View {
-        TUTContentView(totalSets: 10, activeTime: 30, restTime: 30)
+        TUTView(totalSets: 10, activeTime: 30, restTime: 30)
     }
 }

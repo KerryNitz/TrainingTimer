@@ -1,15 +1,15 @@
 //
-//  TUTViewModel.swift
+//  CustomTUTViewModel.swift
 //  TrainingTimer
 //
-//  Created by Kerry Nitz on 30/05/26.
+//  Created by Kerry Nitz on 31/05/26.
 //
 
 import Foundation
 import AudioToolbox
 
-extension TUTView {
-    final class TUTViewModel: ObservableObject {
+extension CustomTUTView {
+    final class CustomTUTViewModel: ObservableObject {
         @Published var isLeadingIn = false
         @Published var leadIn: String = "15"
         @Published var leadInSeconds: Int = 15

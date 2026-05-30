@@ -8,7 +8,7 @@
 import Foundation
 import AudioToolbox
 
-extension EMOMContentView {
+extension EMOMView {
     final class EMOMViewModel: ObservableObject {
         @Published var isLeadingIn = false
         @Published var leadIn: String = "15"

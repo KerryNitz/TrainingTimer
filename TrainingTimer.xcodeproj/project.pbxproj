@@ -16,12 +16,14 @@
 		5E50FF472FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF462FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift */; };
 		5E50FF5A2FC819FC00954751 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF592FC819FC00954751 /* ContentViewModel.swift */; };
 		5E50FF5E2FCA3D6600954751 /* EMOMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */; };
-		5E50FF602FCA481600954751 /* EMOMContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5F2FCA481600954751 /* EMOMContentView.swift */; };
+		5E50FF602FCA481600954751 /* EMOMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5F2FCA481600954751 /* EMOMView.swift */; };
 		5E50FF622FCA674C00954751 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF612FCA674C00954751 /* .gitignore */; };
 		5E50FF642FCA8FBC00954751 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF632FCA8FBC00954751 /* SettingsView.swift */; };
 		5E50FF662FCAA47E00954751 /* TUTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF652FCAA47E00954751 /* TUTViewModel.swift */; };
-		5E50FF682FCAA4EA00954751 /* TUTContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF672FCAA4EA00954751 /* TUTContentView.swift */; };
+		5E50FF682FCAA4EA00954751 /* TUTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF672FCAA4EA00954751 /* TUTView.swift */; };
 		5E50FF6A2FCAAFD200954751 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF692FCAAFD200954751 /* README.md */; };
+		5E50FF6C2FCB863000954751 /* CustomTUTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF6B2FCB863000954751 /* CustomTUTView.swift */; };
+		5E50FF6E2FCB87AC00954751 /* CustomTUTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF6D2FCB87AC00954751 /* CustomTUTViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +56,14 @@
 		5E50FF462FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5E50FF592FC819FC00954751 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMViewModel.swift; sourceTree = "<group>"; };
-		5E50FF5F2FCA481600954751 /* EMOMContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMContentView.swift; sourceTree = "<group>"; };
+		5E50FF5F2FCA481600954751 /* EMOMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMView.swift; sourceTree = "<group>"; };
 		5E50FF612FCA674C00954751 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5E50FF632FCA8FBC00954751 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5E50FF652FCAA47E00954751 /* TUTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUTViewModel.swift; sourceTree = "<group>"; };
-		5E50FF672FCAA4EA00954751 /* TUTContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUTContentView.swift; sourceTree = "<group>"; };
+		5E50FF672FCAA4EA00954751 /* TUTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUTView.swift; sourceTree = "<group>"; };
 		5E50FF692FCAAFD200954751 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5E50FF6B2FCB863000954751 /* CustomTUTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTUTView.swift; sourceTree = "<group>"; };
+		5E50FF6D2FCB87AC00954751 /* CustomTUTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTUTViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +119,12 @@
 				5E50FF292FC7B62500954751 /* TrainingTimerApp.swift */,
 				5E50FF2B2FC7B62500954751 /* ContentView.swift */,
 				5E50FF592FC819FC00954751 /* ContentViewModel.swift */,
-				5E50FF5F2FCA481600954751 /* EMOMContentView.swift */,
+				5E50FF5F2FCA481600954751 /* EMOMView.swift */,
 				5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */,
-				5E50FF672FCAA4EA00954751 /* TUTContentView.swift */,
+				5E50FF672FCAA4EA00954751 /* TUTView.swift */,
 				5E50FF652FCAA47E00954751 /* TUTViewModel.swift */,
+				5E50FF6B2FCB863000954751 /* CustomTUTView.swift */,
+				5E50FF6D2FCB87AC00954751 /* CustomTUTViewModel.swift */,
 				5E50FF632FCA8FBC00954751 /* SettingsView.swift */,
 				5E50FF2D2FC7B62600954751 /* Assets.xcassets */,
 				5E50FF2F2FC7B62600954751 /* Preview Content */,
@@ -285,12 +291,14 @@
 			files = (
 				5E50FF2C2FC7B62500954751 /* ContentView.swift in Sources */,
 				5E50FF2A2FC7B62500954751 /* TrainingTimerApp.swift in Sources */,
-				5E50FF682FCAA4EA00954751 /* TUTContentView.swift in Sources */,
+				5E50FF6C2FCB863000954751 /* CustomTUTView.swift in Sources */,
+				5E50FF682FCAA4EA00954751 /* TUTView.swift in Sources */,
 				5E50FF5E2FCA3D6600954751 /* EMOMViewModel.swift in Sources */,
 				5E50FF642FCA8FBC00954751 /* SettingsView.swift in Sources */,
-				5E50FF602FCA481600954751 /* EMOMContentView.swift in Sources */,
+				5E50FF602FCA481600954751 /* EMOMView.swift in Sources */,
 				5E50FF662FCAA47E00954751 /* TUTViewModel.swift in Sources */,
 				5E50FF5A2FC819FC00954751 /* ContentViewModel.swift in Sources */,
+				5E50FF6E2FCB87AC00954751 /* CustomTUTViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +459,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainingTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -469,6 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kerrynitz.TrainingTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -482,7 +492,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainingTimer/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -500,6 +511,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kerrynitz.TrainingTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
