@@ -10,13 +10,14 @@ import AudioToolbox
 
 extension EMOMContentView {
     final class EMOMViewModel: ObservableObject {
+        /*init(leadInSeconds: Int, sets: Int, minutes: Float) {
+            self.leadInSeconds = leadInSeconds
+            self.sets = sets
+            self.minutes = minutes
+        }*/
         @Published var isLeadingIn = false
         @Published var leadIn: String = "15"
-        @Published var leadInSeconds: Int = 15 {
-            didSet {
-                self.leadIn = "\(leadInSeconds)"
-            }
-        }
+        @Published var leadInSeconds: Int = 15
         @Published var setsToGo: String = "10"
         @Published var sets: Int = 10 {
             didSet {
@@ -35,6 +36,11 @@ extension EMOMContentView {
         private var initialTime = 0
         private var leadInTime = 0
         private var endDate = Date()
+        
+        func setData(_ totalSets: Int){
+            self.sets = totalSets
+            self.setsToGo = "\(totalSets)"
+        }
         
         func startSets(sets: Int) {
             self.remainingSets = sets

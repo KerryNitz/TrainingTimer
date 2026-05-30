@@ -9,7 +9,7 @@ import Foundation
 import AudioToolbox
 
 extension ContentView {
-    final class ViewModel: ObservableObject {
+    final class ContentViewModel: ObservableObject {
         @Published var isActive = false
         @Published var showingAlert = false
         @Published var time: String = "5:00"

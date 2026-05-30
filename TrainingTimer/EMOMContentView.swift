@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EMOMContentView: View {
     @StateObject private var vm = EMOMViewModel()
+    let totalSets: Int
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let width: Double = 600
     
@@ -31,11 +32,13 @@ struct EMOMContentView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.gray, lineWidth: 4)
                     )
+                .onAppear { vm.setData(totalSets)
+                }
             Text("\(vm.time)")
                 .font(.system(size: 70, weight: .medium, design: .rounded))
-                .alert("Timer done!", isPresented: $vm.showingAlert) {
+                .alert("Finished!", isPresented: $vm.showingAlert) {
                     Button("Continue", role: .cancel) {
-                        // Code
+                        vm.reset()
                     }
                 }
                 .padding()
@@ -67,6 +70,6 @@ struct EMOMContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EMOMContentView()
+        EMOMContentView(totalSets: 10)
     }
 }

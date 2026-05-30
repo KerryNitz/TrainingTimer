@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var vm = ViewModel()
+    @StateObject private var vm = ContentViewModel()
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let width: Double = 250
     
@@ -56,6 +56,6 @@ struct ContentView: View {
 
 struct EMOMContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EMOMContentView()
+        EMOMContentView(totalSets: 10)
     }
 }
