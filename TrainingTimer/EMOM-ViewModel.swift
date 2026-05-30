@@ -11,9 +11,18 @@ import AudioToolbox
 extension EMOMContentView {
     final class EMOMViewModel: ObservableObject {
         @Published var isLeadingIn = false
-        @Published var leadInSeconds: Int = 15
         @Published var leadIn: String = "15"
-        @Published var sets: Int = 10
+        @Published var leadInSeconds: Int = 15 {
+            didSet {
+                self.leadIn = "\(leadInSeconds)"
+            }
+        }
+        @Published var setsToGo: String = "10"
+        @Published var sets: Int = 10 {
+            didSet {
+                self.setsToGo = "\(sets)"
+            }
+        }
         @Published var isActive = false
         @Published var showingAlert = false
         @Published var time: String = "1:00"
@@ -22,9 +31,15 @@ extension EMOMContentView {
                 self.time = "\(Int(minutes)):00"
             }
         }
+        private var remainingSets: Int = 0
         private var initialTime = 0
         private var leadInTime = 0
         private var endDate = Date()
+        
+        func startSets(sets: Int) {
+            self.remainingSets = sets
+            startLeadIn(seconds: leadInSeconds)
+        }
 
         // Start the timer with the given amount of minutes
         func startLeadIn(seconds: Int) {
@@ -40,6 +55,7 @@ extension EMOMContentView {
             self.endDate = Date()
             self.isActive = true
             self.endDate = Calendar.current.date(byAdding: .minute, value: Int(minutes), to: endDate)!
+            self.time = "\(Int(minutes)):00"
         }
         
         // Reset the timer
@@ -50,6 +66,8 @@ extension EMOMContentView {
             self.minutes = Float(initialTime)
             self.isActive = false
             self.time = "\(Int(minutes)):00"
+            self.remainingSets = sets
+            self.setsToGo = "\(sets)"
         }
         
         
@@ -67,7 +85,7 @@ extension EMOMContentView {
             // Checks that the countdown is not <= 0
             if diff <= 0 {
                 self.isLeadingIn = false
-                self.leadIn = "0"
+                self.leadIn = "\(leadInSeconds)"
                 start(minutes: minutes)
                 return
             }
@@ -96,15 +114,23 @@ extension EMOMContentView {
             
             // Gets the current date and makes the time difference calculation
             let now = Date()
-            let diff = endDate.timeIntervalSince1970 - now.timeIntervalSince1970
             
             // Checks that the countdown is not <= 0
-            if diff <= 0 {
-                self.isActive = false
-                self.time = "0:00"
-                self.showingAlert = true
-                return
+            if endDate.timeIntervalSince1970 <= now.timeIntervalSince1970 {
+                self.remainingSets -= 1
+                self.setsToGo = "\(self.remainingSets)"
+                if self.remainingSets > 0 {
+                    self.minutes = Float(initialTime)
+                    start(minutes: self.minutes)
+                } else {
+                    self.isActive = false
+                    self.time = "0:00"
+                    self.showingAlert = true
+                    return
+                }
             }
+            
+            let diff = endDate.timeIntervalSince1970 - now.timeIntervalSince1970
             
             // Turns the time difference calculation into sensible data and formats it
             let date = Date(timeIntervalSince1970: diff)

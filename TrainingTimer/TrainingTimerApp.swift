@@ -11,7 +11,16 @@ import SwiftUI
 struct TrainingTimerApp: App {
     var body: some Scene {
         WindowGroup {
-            EMOMContentView()
+            TabView {
+                EMOMContentView()
+                    .tabItem {
+                        Label("EMOM10", systemImage: "clock")
+                    }
+                ContentView()
+                    .tabItem {
+                        Label("Timer", systemImage: "clock")
+                    }
+            }
         }
     }
 }

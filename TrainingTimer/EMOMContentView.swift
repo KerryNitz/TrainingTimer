@@ -10,11 +10,18 @@ import SwiftUI
 struct EMOMContentView: View {
     @StateObject private var vm = EMOMViewModel()
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private let width: Double = 300
+    private let width: Double = 600
     
     var body: some View {
         VStack {
             Text("Lead In: \(vm.leadIn)")
+                .opacity(vm.isLeadingIn ? 1 : 0) // Hides text layout-neutrally if not leading in
+                .animation(.default, value: vm.isLeadingIn)
+                .font(.system(size: 70, weight: .medium, design: .rounded))
+                .padding()
+                .frame(width: width)
+                .background(.clear)
+            Text("Sets to go: \(vm.setsToGo)")
                 .font(.system(size: 70, weight: .medium, design: .rounded))
                 .padding()
                 .frame(width: width)
@@ -39,16 +46,9 @@ struct EMOMContentView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.gray, lineWidth: 4)
                     )
-            
-            Slider(value: $vm.minutes, in: 1...10, step: 1)
-                .padding()
-                .disabled(vm.isActive)
-                .animation(.easeInOut, value: vm.minutes)
-                .frame(width: width)
-
             HStack(spacing:50) {
                 Button("Start") {
-                    vm.startLeadIn(seconds: vm.leadInSeconds)
+                    vm.startSets(sets: vm.sets)
                 }
                 .disabled(vm.isActive)
                 
