@@ -1,5 +1,5 @@
 //
-//  Content-ViewModel.swift
+//  ContentViewModel.swift
 //  TrainingTimer
 //
 //  Created by Kerry Nitz on 28/05/26. Based on https://github.com/indently/CustomCountdownTimer/tree/main/CustomCountdownTimer.xcodeproj

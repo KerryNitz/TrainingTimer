@@ -1,5 +1,5 @@
 //
-//  EMOMContentView.swift
+//  EMOMView.swift
 //  TrainingTimer
 //
 //  Created by Kerry Nitz on 30/05/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EMOMContentView: View {
+struct EMOMView: View {
     @StateObject private var vm = EMOMViewModel()
     let totalSets: Int
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -68,8 +68,8 @@ struct EMOMContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct EMOMView_Previews: PreviewProvider {
     static var previews: some View {
-        EMOMContentView(totalSets: 10)
+        EMOMView(totalSets: 10)
     }
 }
