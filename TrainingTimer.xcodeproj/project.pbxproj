@@ -19,6 +19,9 @@
 		5E50FF602FCA481600954751 /* EMOMContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5F2FCA481600954751 /* EMOMContentView.swift */; };
 		5E50FF622FCA674C00954751 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF612FCA674C00954751 /* .gitignore */; };
 		5E50FF642FCA8FBC00954751 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF632FCA8FBC00954751 /* SettingsView.swift */; };
+		5E50FF662FCAA47E00954751 /* TUTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF652FCAA47E00954751 /* TUTViewModel.swift */; };
+		5E50FF682FCAA4EA00954751 /* TUTContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF672FCAA4EA00954751 /* TUTContentView.swift */; };
+		5E50FF6A2FCAAFD200954751 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF692FCAAFD200954751 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		5E50FF5F2FCA481600954751 /* EMOMContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMContentView.swift; sourceTree = "<group>"; };
 		5E50FF612FCA674C00954751 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5E50FF632FCA8FBC00954751 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5E50FF652FCAA47E00954751 /* TUTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUTViewModel.swift; sourceTree = "<group>"; };
+		5E50FF672FCAA4EA00954751 /* TUTContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUTContentView.swift; sourceTree = "<group>"; };
+		5E50FF692FCAAFD200954751 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		5E50FF1D2FC7B62500954751 = {
 			isa = PBXGroup;
 			children = (
+				5E50FF692FCAAFD200954751 /* README.md */,
 				5E50FF612FCA674C00954751 /* .gitignore */,
 				5E50FF282FC7B62500954751 /* TrainingTimer */,
 				5E50FF392FC7B62600954751 /* TrainingTimerTests */,
@@ -110,9 +117,11 @@
 				5E50FF592FC819FC00954751 /* ContentViewModel.swift */,
 				5E50FF5F2FCA481600954751 /* EMOMContentView.swift */,
 				5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */,
+				5E50FF672FCAA4EA00954751 /* TUTContentView.swift */,
+				5E50FF652FCAA47E00954751 /* TUTViewModel.swift */,
+				5E50FF632FCA8FBC00954751 /* SettingsView.swift */,
 				5E50FF2D2FC7B62600954751 /* Assets.xcassets */,
 				5E50FF2F2FC7B62600954751 /* Preview Content */,
-				5E50FF632FCA8FBC00954751 /* SettingsView.swift */,
 			);
 			path = TrainingTimer;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 			files = (
 				5E50FF312FC7B62600954751 /* Preview Assets.xcassets in Resources */,
 				5E50FF622FCA674C00954751 /* .gitignore in Resources */,
+				5E50FF6A2FCAAFD200954751 /* README.md in Resources */,
 				5E50FF2E2FC7B62600954751 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,9 +285,11 @@
 			files = (
 				5E50FF2C2FC7B62500954751 /* ContentView.swift in Sources */,
 				5E50FF2A2FC7B62500954751 /* TrainingTimerApp.swift in Sources */,
+				5E50FF682FCAA4EA00954751 /* TUTContentView.swift in Sources */,
 				5E50FF5E2FCA3D6600954751 /* EMOMViewModel.swift in Sources */,
 				5E50FF642FCA8FBC00954751 /* SettingsView.swift in Sources */,
 				5E50FF602FCA481600954751 /* EMOMContentView.swift in Sources */,
+				5E50FF662FCAA47E00954751 /* TUTViewModel.swift in Sources */,
 				5E50FF5A2FC819FC00954751 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,10 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainingTimer/Preview Content\"";
-				DEVELOPMENT_TEAM = 7VABTLU942;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Training Timer";
@@ -457,8 +469,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanitzpublishing.trainingtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,10 +482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TrainingTimer/Preview Content\"";
-				DEVELOPMENT_TEAM = 7VABTLU942;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Training Timer";
@@ -488,8 +500,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanitzpublishing.trainingtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

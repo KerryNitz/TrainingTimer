@@ -1,5 +1,5 @@
 //
-//  EMOMContentView.swift
+//  TUTContentView.swift
 //  TrainingTimer
 //
 //  Created by Kerry Nitz on 30/05/26.
@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct EMOMContentView: View {
-    @StateObject private var vm = EMOMViewModel()
+struct TUTContentView: View {
+    @StateObject private var vm = TUTViewModel()
     let totalSets: Int
+    let activeTime: Int
+    let restTime: Int
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let width: Double = 600
     
@@ -32,7 +34,7 @@ struct EMOMContentView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.gray, lineWidth: 4)
                     )
-                .onAppear { vm.setData(totalSets)
+                .onAppear { vm.setData(totalSets, activeTime: activeTime, restTime: restTime)
                 }
             Text("\(vm.time)")
                 .font(.system(size: 70, weight: .medium, design: .rounded))
@@ -68,8 +70,8 @@ struct EMOMContentView: View {
     }
 }
 
-struct EMOMContentView_Previews: PreviewProvider {
+struct TUTContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EMOMContentView(totalSets: 10)
+        TUTContentView(totalSets: 10, activeTime: 30, restTime: 30)
     }
 }
