@@ -11,19 +11,19 @@ struct EMOMView: View {
     @StateObject private var vm = EMOMViewModel()
     let totalSets: Int
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private let width: Double = 600
+    private let width: Double = 200
     
     var body: some View {
         VStack {
             Text("Lead In: \(vm.leadIn)")
                 .opacity(vm.isLeadingIn ? 1 : 0) // Hides text layout-neutrally if not leading in
                 .animation(.default, value: vm.isLeadingIn)
-                .font(.system(size: 70, weight: .medium, design: .rounded))
+                .font(.headline)
                 .padding()
                 .frame(width: width)
                 .background(.clear)
             Text("Sets to go: \(vm.setsToGo)")
-                .font(.system(size: 70, weight: .medium, design: .rounded))
+                .font(.headline)
                 .padding()
                 .frame(width: width)
                 .background(.thinMaterial)
@@ -35,7 +35,7 @@ struct EMOMView: View {
                 .onAppear { vm.setData(totalSets)
                 }
             Text("\(vm.time)")
-                .font(.system(size: 70, weight: .medium, design: .rounded))
+                .font(.headline)
                 .alert("Finished!", isPresented: $vm.showingAlert) {
                     Button("Continue", role: .cancel) {
                         vm.reset()
