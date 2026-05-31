@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TUTView: View {
     @StateObject private var vm = TUTViewModel()
-    let totalSets: Int
+    @AppStorage("totalSets") private var totalSets = "10"
+    
     let activeTime: Int
     let restTime: Int
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -42,7 +43,7 @@ struct TUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData(totalSets, activeTime: activeTime, restTime: restTime)
+                        .onAppear { vm.setData(Int($totalSets.wrappedValue) ?? 0, activeTime: activeTime, restTime: restTime)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }
@@ -89,6 +90,6 @@ struct TUTView: View {
 
 struct TUTView_Previews: PreviewProvider {
     static var previews: some View {
-        TUTView(totalSets: 10, activeTime: 30, restTime: 30)
+        TUTView(activeTime: 30, restTime: 30)
     }
 }
