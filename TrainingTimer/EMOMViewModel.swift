@@ -77,7 +77,7 @@ extension EMOMView {
             guard isLeadingIn else { return }
             
             // Apple System Sound ID for a standard beep/alert (ID 1057 or 1000)
-            let almostSoundID: SystemSoundID = 1013
+            let almostSoundID: SystemSoundID = 1200 //1200 is touch tone; 1013 is bell
             
             // Gets the current date and makes the time difference calculation
             let now = Date()
@@ -111,7 +111,7 @@ extension EMOMView {
             guard isActive else { return }
             
             // Apple System Sound ID for a standard beep/alert (ID 1057 or 1000)
-            let almostSoundID: SystemSoundID = 1013
+            let almostSoundID: SystemSoundID = 1200 //1200 is touch tone; 1013 is bell
             
             // Gets the current date and makes the time difference calculation
             let now = Date()

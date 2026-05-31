@@ -20,17 +20,17 @@ struct TrainingTimerApp: App {
                     .tabItem {
                         Label("EMOM20", systemImage: "clock")
                     }
-                TUTView(totalSets: 10, activeTime: 30, restTime: 30)
+                TUTView(activeTime: 30, restTime: 30)
                     .tabItem {
-                        Label("TUT30/30x10", systemImage: "clock")
+                        Label("TUT30/30", systemImage: "clock")
                     }
-                TUTView(totalSets: 10, activeTime: 60, restTime: 60)
+                TUTView(activeTime: 60, restTime: 60)
                     .tabItem {
-                        Label("TUT60/60x10", systemImage: "clock")
+                        Label("TUT60/60", systemImage: "clock")
                     }
-                TUTView(totalSets: 10, activeTime: 90, restTime: 30)
+                TUTView(activeTime: 90, restTime: 30)
                     .tabItem {
-                        Label("TUT90/30x10", systemImage: "clock")
+                        Label("TUT90/30", systemImage: "clock")
                     }
                 CustomTUTView()
                     .tabItem {
