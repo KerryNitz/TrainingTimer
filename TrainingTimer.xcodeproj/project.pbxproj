@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5E50FF2A2FC7B62500954751 /* TrainingTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF292FC7B62500954751 /* TrainingTimerApp.swift */; };
-		5E50FF2C2FC7B62500954751 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF2B2FC7B62500954751 /* ContentView.swift */; };
 		5E50FF2E2FC7B62600954751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF2D2FC7B62600954751 /* Assets.xcassets */; };
 		5E50FF312FC7B62600954751 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF302FC7B62600954751 /* Preview Assets.xcassets */; };
 		5E50FF3B2FC7B62600954751 /* TrainingTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF3A2FC7B62600954751 /* TrainingTimerTests.swift */; };
 		5E50FF452FC7B62600954751 /* TrainingTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF442FC7B62600954751 /* TrainingTimerUITests.swift */; };
 		5E50FF472FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF462FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift */; };
-		5E50FF5A2FC819FC00954751 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF592FC819FC00954751 /* ContentViewModel.swift */; };
 		5E50FF5E2FCA3D6600954751 /* EMOMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */; };
 		5E50FF602FCA481600954751 /* EMOMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5F2FCA481600954751 /* EMOMView.swift */; };
 		5E50FF622FCA674C00954751 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF612FCA674C00954751 /* .gitignore */; };
@@ -46,7 +44,6 @@
 /* Begin PBXFileReference section */
 		5E50FF262FC7B62500954751 /* TrainingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E50FF292FC7B62500954751 /* TrainingTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerApp.swift; sourceTree = "<group>"; };
-		5E50FF2B2FC7B62500954751 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E50FF2D2FC7B62600954751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E50FF302FC7B62600954751 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E50FF362FC7B62600954751 /* TrainingTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +51,6 @@
 		5E50FF402FC7B62600954751 /* TrainingTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E50FF442FC7B62600954751 /* TrainingTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerUITests.swift; sourceTree = "<group>"; };
 		5E50FF462FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5E50FF592FC819FC00954751 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMViewModel.swift; sourceTree = "<group>"; };
 		5E50FF5F2FCA481600954751 /* EMOMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMView.swift; sourceTree = "<group>"; };
 		5E50FF612FCA674C00954751 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -117,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				5E50FF292FC7B62500954751 /* TrainingTimerApp.swift */,
-				5E50FF2B2FC7B62500954751 /* ContentView.swift */,
-				5E50FF592FC819FC00954751 /* ContentViewModel.swift */,
 				5E50FF5F2FCA481600954751 /* EMOMView.swift */,
 				5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */,
 				5E50FF672FCAA4EA00954751 /* TUTView.swift */,
@@ -289,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E50FF2C2FC7B62500954751 /* ContentView.swift in Sources */,
 				5E50FF2A2FC7B62500954751 /* TrainingTimerApp.swift in Sources */,
 				5E50FF6C2FCB863000954751 /* CustomTUTView.swift in Sources */,
 				5E50FF682FCAA4EA00954751 /* TUTView.swift in Sources */,
@@ -297,7 +290,6 @@
 				5E50FF642FCA8FBC00954751 /* SettingsView.swift in Sources */,
 				5E50FF602FCA481600954751 /* EMOMView.swift in Sources */,
 				5E50FF662FCAA47E00954751 /* TUTViewModel.swift in Sources */,
-				5E50FF5A2FC819FC00954751 /* ContentViewModel.swift in Sources */,
 				5E50FF6E2FCB87AC00954751 /* CustomTUTViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
