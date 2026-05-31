@@ -13,24 +13,24 @@ struct SettingsView: View {
     @AppStorage("timeUnderTension") private var timeUnderTension = "30"
     @AppStorage("timeResting") private var timeResting = "30"
     
-    private let width: Double = 400
+    private let width: Double = 150
     private let inputWidth: Double = 75
     
     var body: some View {
         VStack {
             Text("Settings")
-                .font(.system(size: 50, weight: .medium, design: .rounded))
+                .font(.headline)
                 .padding()
                 .frame(width: width)
                 .background(.clear)
             HStack {
                 Text("Number of Rounds:")
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: width, alignment: Alignment.trailing)
                     .background(.clear)
                 TextField("Number of Rounds:", text: $totalRounds)
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: inputWidth, alignment: Alignment.trailing)
                     .background(.thinMaterial)
@@ -42,12 +42,12 @@ struct SettingsView: View {
             }
             HStack {
                 Text("Number of Exercises:")
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: width, alignment: Alignment.trailing)
                     .background(.clear)
                 TextField("Number of Exercises:", text: $totalExercises)
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: inputWidth, alignment: Alignment.trailing)
                     .background(.thinMaterial)
@@ -59,12 +59,12 @@ struct SettingsView: View {
             }
             HStack {
                 Text("Time under tension (s):")
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: width, alignment: Alignment.trailing)
                     .background(.clear)
                 TextField("Time under tension (s):", text: $timeUnderTension)
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: inputWidth, alignment: Alignment.trailing)
                     .background(.thinMaterial)
@@ -76,12 +76,12 @@ struct SettingsView: View {
             }
             HStack {
                 Text("Time resting (s):")
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: width, alignment: Alignment.trailing)
                     .background(.clear)
                 TextField("Time resting (s):", text: $timeResting)
-                    .font(.system(size: 30, weight: .medium, design: .rounded))
+                    .font(.headline)
                     .padding()
                     .frame(width: inputWidth, alignment: Alignment.trailing)
                     .background(.thinMaterial)
