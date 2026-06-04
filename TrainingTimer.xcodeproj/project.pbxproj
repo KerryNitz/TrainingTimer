@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E46C8882FD0E2FB00656AA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF632FCA8FBC00954751 /* SettingsView.swift */; };
+		5E46C88A2FD0EB2400656AA6 /* CustomEMOMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E46C8892FD0EB2400656AA6 /* CustomEMOMView.swift */; };
+		5E46C88C2FD0EEAA00656AA6 /* CustomEMOMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E46C88B2FD0EEAA00656AA6 /* CustomEMOMViewModel.swift */; };
 		5E50FF2A2FC7B62500954751 /* TrainingTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF292FC7B62500954751 /* TrainingTimerApp.swift */; };
 		5E50FF2E2FC7B62600954751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF2D2FC7B62600954751 /* Assets.xcassets */; };
 		5E50FF312FC7B62600954751 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF302FC7B62600954751 /* Preview Assets.xcassets */; };
-		5E50FF3B2FC7B62600954751 /* TrainingTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF3A2FC7B62600954751 /* TrainingTimerTests.swift */; };
-		5E50FF452FC7B62600954751 /* TrainingTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF442FC7B62600954751 /* TrainingTimerUITests.swift */; };
-		5E50FF472FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF462FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift */; };
 		5E50FF5E2FCA3D6600954751 /* EMOMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */; };
 		5E50FF602FCA481600954751 /* EMOMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF5F2FCA481600954751 /* EMOMView.swift */; };
 		5E50FF622FCA674C00954751 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF612FCA674C00954751 /* .gitignore */; };
-		5E50FF642FCA8FBC00954751 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF632FCA8FBC00954751 /* SettingsView.swift */; };
 		5E50FF662FCAA47E00954751 /* TUTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF652FCAA47E00954751 /* TUTViewModel.swift */; };
 		5E50FF682FCAA4EA00954751 /* TUTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF672FCAA4EA00954751 /* TUTView.swift */; };
 		5E50FF6A2FCAAFD200954751 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E50FF692FCAAFD200954751 /* README.md */; };
@@ -24,33 +23,13 @@
 		5E50FF6E2FCB87AC00954751 /* CustomTUTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50FF6D2FCB87AC00954751 /* CustomTUTViewModel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5E50FF372FC7B62600954751 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E50FF1E2FC7B62500954751 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5E50FF252FC7B62500954751;
-			remoteInfo = TrainingTimer;
-		};
-		5E50FF412FC7B62600954751 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E50FF1E2FC7B62500954751 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5E50FF252FC7B62500954751;
-			remoteInfo = TrainingTimer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		5E46C8892FD0EB2400656AA6 /* CustomEMOMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEMOMView.swift; sourceTree = "<group>"; };
+		5E46C88B2FD0EEAA00656AA6 /* CustomEMOMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEMOMViewModel.swift; sourceTree = "<group>"; };
 		5E50FF262FC7B62500954751 /* TrainingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E50FF292FC7B62500954751 /* TrainingTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerApp.swift; sourceTree = "<group>"; };
 		5E50FF2D2FC7B62600954751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E50FF302FC7B62600954751 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5E50FF362FC7B62600954751 /* TrainingTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E50FF3A2FC7B62600954751 /* TrainingTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerTests.swift; sourceTree = "<group>"; };
-		5E50FF402FC7B62600954751 /* TrainingTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E50FF442FC7B62600954751 /* TrainingTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerUITests.swift; sourceTree = "<group>"; };
-		5E50FF462FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5E50FF5D2FCA3D6600954751 /* EMOMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMViewModel.swift; sourceTree = "<group>"; };
 		5E50FF5F2FCA481600954751 /* EMOMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOMView.swift; sourceTree = "<group>"; };
 		5E50FF612FCA674C00954751 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -70,20 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E50FF332FC7B62600954751 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E50FF3D2FC7B62600954751 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,8 +58,6 @@
 				5E50FF692FCAAFD200954751 /* README.md */,
 				5E50FF612FCA674C00954751 /* .gitignore */,
 				5E50FF282FC7B62500954751 /* TrainingTimer */,
-				5E50FF392FC7B62600954751 /* TrainingTimerTests */,
-				5E50FF432FC7B62600954751 /* TrainingTimerUITests */,
 				5E50FF272FC7B62500954751 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				5E50FF262FC7B62500954751 /* TrainingTimer.app */,
-				5E50FF362FC7B62600954751 /* TrainingTimerTests.xctest */,
-				5E50FF402FC7B62600954751 /* TrainingTimerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +80,8 @@
 				5E50FF652FCAA47E00954751 /* TUTViewModel.swift */,
 				5E50FF6B2FCB863000954751 /* CustomTUTView.swift */,
 				5E50FF6D2FCB87AC00954751 /* CustomTUTViewModel.swift */,
+				5E46C8892FD0EB2400656AA6 /* CustomEMOMView.swift */,
+				5E46C88B2FD0EEAA00656AA6 /* CustomEMOMViewModel.swift */,
 				5E50FF632FCA8FBC00954751 /* SettingsView.swift */,
 				5E50FF2D2FC7B62600954751 /* Assets.xcassets */,
 				5E50FF2F2FC7B62600954751 /* Preview Content */,
@@ -132,23 +95,6 @@
 				5E50FF302FC7B62600954751 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		5E50FF392FC7B62600954751 /* TrainingTimerTests */ = {
-			isa = PBXGroup;
-			children = (
-				5E50FF3A2FC7B62600954751 /* TrainingTimerTests.swift */,
-			);
-			path = TrainingTimerTests;
-			sourceTree = "<group>";
-		};
-		5E50FF432FC7B62600954751 /* TrainingTimerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5E50FF442FC7B62600954751 /* TrainingTimerUITests.swift */,
-				5E50FF462FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift */,
-			);
-			path = TrainingTimerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,42 +117,6 @@
 			productReference = 5E50FF262FC7B62500954751 /* TrainingTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5E50FF352FC7B62600954751 /* TrainingTimerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5E50FF4D2FC7B62600954751 /* Build configuration list for PBXNativeTarget "TrainingTimerTests" */;
-			buildPhases = (
-				5E50FF322FC7B62600954751 /* Sources */,
-				5E50FF332FC7B62600954751 /* Frameworks */,
-				5E50FF342FC7B62600954751 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5E50FF382FC7B62600954751 /* PBXTargetDependency */,
-			);
-			name = TrainingTimerTests;
-			productName = TrainingTimerTests;
-			productReference = 5E50FF362FC7B62600954751 /* TrainingTimerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5E50FF3F2FC7B62600954751 /* TrainingTimerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5E50FF502FC7B62600954751 /* Build configuration list for PBXNativeTarget "TrainingTimerUITests" */;
-			buildPhases = (
-				5E50FF3C2FC7B62600954751 /* Sources */,
-				5E50FF3D2FC7B62600954751 /* Frameworks */,
-				5E50FF3E2FC7B62600954751 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5E50FF422FC7B62600954751 /* PBXTargetDependency */,
-			);
-			name = TrainingTimerUITests;
-			productName = TrainingTimerUITests;
-			productReference = 5E50FF402FC7B62600954751 /* TrainingTimerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,14 +129,6 @@
 				TargetAttributes = {
 					5E50FF252FC7B62500954751 = {
 						CreatedOnToolsVersion = 15.2;
-					};
-					5E50FF352FC7B62600954751 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 5E50FF252FC7B62500954751;
-					};
-					5E50FF3F2FC7B62600954751 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 5E50FF252FC7B62500954751;
 					};
 				};
 			};
@@ -244,8 +146,6 @@
 			projectRoot = "";
 			targets = (
 				5E50FF252FC7B62500954751 /* TrainingTimer */,
-				5E50FF352FC7B62600954751 /* TrainingTimerTests */,
-				5E50FF3F2FC7B62600954751 /* TrainingTimerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,20 +162,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E50FF342FC7B62600954751 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E50FF3E2FC7B62600954751 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -284,47 +170,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E50FF2A2FC7B62500954751 /* TrainingTimerApp.swift in Sources */,
+				5E46C8882FD0E2FB00656AA6 /* SettingsView.swift in Sources */,
 				5E50FF6C2FCB863000954751 /* CustomTUTView.swift in Sources */,
 				5E50FF682FCAA4EA00954751 /* TUTView.swift in Sources */,
 				5E50FF5E2FCA3D6600954751 /* EMOMViewModel.swift in Sources */,
-				5E50FF642FCA8FBC00954751 /* SettingsView.swift in Sources */,
 				5E50FF602FCA481600954751 /* EMOMView.swift in Sources */,
 				5E50FF662FCAA47E00954751 /* TUTViewModel.swift in Sources */,
 				5E50FF6E2FCB87AC00954751 /* CustomTUTViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E50FF322FC7B62600954751 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E50FF3B2FC7B62600954751 /* TrainingTimerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E50FF3C2FC7B62600954751 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E50FF472FC7B62600954751 /* TrainingTimerUITestsLaunchTests.swift in Sources */,
-				5E50FF452FC7B62600954751 /* TrainingTimerUITests.swift in Sources */,
+				5E46C88A2FD0EB2400656AA6 /* CustomEMOMView.swift in Sources */,
+				5E46C88C2FD0EEAA00656AA6 /* CustomEMOMViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5E50FF382FC7B62600954751 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5E50FF252FC7B62500954751 /* TrainingTimer */;
-			targetProxy = 5E50FF372FC7B62600954751 /* PBXContainerItemProxy */;
-		};
-		5E50FF422FC7B62600954751 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5E50FF252FC7B62500954751 /* TrainingTimer */;
-			targetProxy = 5E50FF412FC7B62600954751 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5E50FF482FC7B62600954751 /* Debug */ = {
@@ -512,78 +370,6 @@
 			};
 			name = Release;
 		};
-		5E50FF4E2FC7B62600954751 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanitzpublishing.apps.TrainingTimerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrainingTimer";
-			};
-			name = Debug;
-		};
-		5E50FF4F2FC7B62600954751 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanitzpublishing.apps.TrainingTimerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrainingTimer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrainingTimer";
-			};
-			name = Release;
-		};
-		5E50FF512FC7B62600954751 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanitzpublishing.apps.TrainingTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrainingTimer;
-			};
-			name = Debug;
-		};
-		5E50FF522FC7B62600954751 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kanitzpublishing.apps.TrainingTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrainingTimer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -601,24 +387,6 @@
 			buildConfigurations = (
 				5E50FF4B2FC7B62600954751 /* Debug */,
 				5E50FF4C2FC7B62600954751 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5E50FF4D2FC7B62600954751 /* Build configuration list for PBXNativeTarget "TrainingTimerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5E50FF4E2FC7B62600954751 /* Debug */,
-				5E50FF4F2FC7B62600954751 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5E50FF502FC7B62600954751 /* Build configuration list for PBXNativeTarget "TrainingTimerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5E50FF512FC7B62600954751 /* Debug */,
-				5E50FF522FC7B62600954751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

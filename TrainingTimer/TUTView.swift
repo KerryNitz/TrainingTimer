@@ -25,7 +25,6 @@ struct TUTView: View {
                     Text("Lead In: \(vm.leadIn)")
                         .opacity(vm.isLeadingIn ? 1 : 0) // Hides text layout-neutrally if not leading in
                         .animation(.default, value: vm.isLeadingIn)
-                        .font(.system(size: geo.size.width * widthFactor))
                         .padding()
                         .frame(width: geo.size.width * 0.8, alignment: .center)
                         .background(.clear)
@@ -34,7 +33,6 @@ struct TUTView: View {
                 HStack {
                     Spacer(minLength: geo.size.width * 0.1)
                     Text("Sets to go: \(vm.setsToGo)")
-                        .font(.system(size: geo.size.width * widthFactor))
                         .padding()
                         .frame(width: geo.size.width * 0.8, alignment: .center)
                         .background(.thinMaterial)
@@ -50,7 +48,6 @@ struct TUTView: View {
                 HStack {
                     Spacer(minLength: geo.size.width * 0.1)
                     Text("\(vm.time)")
-                        .font(.system(size: geo.size.width * widthFactor))
                         .alert("Finished!", isPresented: $vm.showingAlert) {
                             Button("Continue", role: .cancel) {
                                 vm.reset()
@@ -71,15 +68,15 @@ struct TUTView: View {
                         vm.startSets(sets: vm.sets)
                     }
                         .disabled(vm.isActive)
-                        .font(.system(size: geo.size.width * widthFactor))
-                    
+                        
                     Button("Reset", action: vm.reset)
                         .tint(.red)
-                        .font(.system(size: geo.size.width * widthFactor))
                 }
                 Spacer()
             }
+            .font(.system(size: geo.size.width * widthFactor))
         }
+        
         .onReceive(timer) { _ in
             vm.updateLeadIn()
             vm.updateCountdown()
@@ -88,8 +85,6 @@ struct TUTView: View {
     }
 }
 
-struct TUTView_Previews: PreviewProvider {
-    static var previews: some View {
-        TUTView(activeTime: 30, restTime: 30)
-    }
+#Preview {
+    TUTView(activeTime: 30, restTime: 30)
 }
