@@ -32,9 +32,11 @@ extension EMOMView {
         private var leadInTime = 0
         private var endDate = Date()
         
-        func setData(_ totalSets: Int){
+        func setData(_ totalSets: Int, leadInTime: Int){
             self.sets = totalSets
             self.setsToGo = "\(totalSets)"
+            self.leadInSeconds = leadInTime
+            self.leadIn = "\(leadInTime)"
         }
         
         func startSets(sets: Int) {

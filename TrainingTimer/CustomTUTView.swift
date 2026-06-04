@@ -13,6 +13,7 @@ struct CustomTUTView: View {
     @AppStorage("totalExercises") private var totalExercises = "8"
     @AppStorage("timeUnderTension") private var timeUnderTension = "30"
     @AppStorage("timeResting") private var timeResting = "30"
+    @AppStorage("leadInTime") private var leadInTime = "10"
     
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05
@@ -41,7 +42,7 @@ struct CustomTUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData((Int($totalRounds.wrappedValue) ?? 0) * (Int($totalExercises.wrappedValue) ?? 0), activeTime: Int($timeUnderTension.wrappedValue) ?? 0, restTime: Int($timeResting.wrappedValue) ?? 0)
+                        .onAppear { vm.setData((Int($totalRounds.wrappedValue) ?? 0) * (Int($totalExercises.wrappedValue) ?? 0), activeTime: Int($timeUnderTension.wrappedValue) ?? 0, restTime: Int($timeResting.wrappedValue) ?? 0, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }

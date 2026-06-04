@@ -35,12 +35,14 @@ extension TUTView {
         private var leadInTime = 0
         private var endDate = Date()
         
-        func setData(_ totalSets: Int, activeTime: Int, restTime: Int){
+        func setData(_ totalSets: Int, activeTime: Int, restTime: Int, leadInTime: Int){
             self.sets = totalSets
             self.setsToGo = "\(totalSets)"
             self.seconds = activeTime
             self.time = "Go for \(activeTime)"
             self.rest = restTime
+            self.leadInSeconds = leadInTime
+            self.leadIn = "\(leadInTime)"
         }
         
         func startSets(sets: Int) {

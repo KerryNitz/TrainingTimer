@@ -11,6 +11,7 @@ import SwiftUI
 struct CustomEMOMView: View {
     @StateObject private var vm = CustomEMOMViewModel()
     @AppStorage("totalMinutes") private var totalMinutes = "30"
+    @AppStorage("leadInTime") private var leadInTime = "10"
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05
     
@@ -40,7 +41,7 @@ struct CustomEMOMView: View {
                                 .stroke(Color.gray, lineWidth: 4)
                         )
                         .onAppear {
-                            vm.setData(Int($totalMinutes.wrappedValue) ?? 0)
+                            vm.setData(Int($totalMinutes.wrappedValue) ?? 0, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }
