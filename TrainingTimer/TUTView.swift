@@ -10,6 +10,7 @@ import SwiftUI
 struct TUTView: View {
     @StateObject private var vm = TUTViewModel()
     @AppStorage("totalSets") private var totalSets = "10"
+    @AppStorage("leadInTime") private var leadInTime = "10"
     
     let activeTime: Int
     let restTime: Int
@@ -41,7 +42,7 @@ struct TUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData(Int($totalSets.wrappedValue) ?? 0, activeTime: activeTime, restTime: restTime)
+                        .onAppear { vm.setData(Int($totalSets.wrappedValue) ?? 0, activeTime: activeTime, restTime: restTime, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }

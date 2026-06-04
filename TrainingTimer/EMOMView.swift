@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EMOMView: View {
     @StateObject private var vm = EMOMViewModel()
+    @AppStorage("leadInTime") private var leadInTime = "10"
     let totalSets: Int
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05
@@ -39,7 +40,7 @@ struct EMOMView: View {
                                 .stroke(Color.gray, lineWidth: 4)
                         )
                         .onAppear {
-                            vm.setData(totalSets)
+                            vm.setData(totalSets, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }
