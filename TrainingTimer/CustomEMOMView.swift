@@ -1,19 +1,16 @@
 //
-//  CustomTUTView.swift
+//  CustomEMOMView.swift
 //  TrainingTimer
 //
-//  Created by Kerry Nitz on 31/05/26.
+//  Created by Kerry Nitz on 4/06/26.
 //
 
 import SwiftUI
 
-struct CustomTUTView: View {
-    @StateObject private var vm = CustomTUTViewModel()
-    @AppStorage("totalRounds") private var totalRounds = "4"
-    @AppStorage("totalExercises") private var totalExercises = "8"
-    @AppStorage("timeUnderTension") private var timeUnderTension = "30"
-    @AppStorage("timeResting") private var timeResting = "30"
-    
+
+struct CustomEMOMView: View {
+    @StateObject private var vm = CustomEMOMViewModel()
+    @AppStorage("totalMinutes") private var totalMinutes = "30"
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05
     
@@ -22,6 +19,7 @@ struct CustomTUTView: View {
             VStack {
                 Spacer()
                 HStack {
+                    Spacer(minLength: geo.size.width * 0.1)
                     Text("Lead In: \(vm.leadIn)")
                         .opacity(vm.isLeadingIn ? 1 : 0) // Hides text layout-neutrally if not leading in
                         .animation(.default, value: vm.isLeadingIn)
@@ -32,7 +30,7 @@ struct CustomTUTView: View {
                 }
                 HStack {
                     Spacer(minLength: geo.size.width * 0.1)
-                    Text("Sets to go: \(vm.setsToGo)")
+                    Text("Minutes to go: \(vm.setsToGo)")
                         .padding()
                         .frame(width: geo.size.width * 0.8, alignment: .center)
                         .background(.thinMaterial)
@@ -41,7 +39,8 @@ struct CustomTUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData((Int($totalRounds.wrappedValue) ?? 0) * (Int($totalExercises.wrappedValue) ?? 0), activeTime: Int($timeUnderTension.wrappedValue) ?? 0, restTime: Int($timeResting.wrappedValue) ?? 0)
+                        .onAppear {
+                            vm.setData(Int($totalMinutes.wrappedValue) ?? 0)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }
@@ -54,7 +53,7 @@ struct CustomTUTView: View {
                             }
                         }
                         .padding()
-                        .frame(width: geo.size.width * 0.8, alignment: .center)
+                        .frame(width: geo.size.width * 0.8)
                         .background(.thinMaterial)
                         .cornerRadius(20)
                         .overlay(
@@ -85,5 +84,5 @@ struct CustomTUTView: View {
 }
 
 #Preview {
-    CustomTUTView()
+    EMOMView(totalSets: 30)
 }

@@ -32,6 +32,10 @@ struct TrainingTimerApp: App {
                     .tabItem {
                         Label("TUT90/30", systemImage: "clock")
                     }
+                CustomEMOMView()
+                    .tabItem {
+                        Label("Custom EMOM", systemImage: "clock")
+                    }
                 CustomTUTView()
                     .tabItem {
                         Label("Custom TUT", systemImage: "clock")

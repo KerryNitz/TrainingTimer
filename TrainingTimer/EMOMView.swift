@@ -22,7 +22,6 @@ struct EMOMView: View {
                     Text("Lead In: \(vm.leadIn)")
                         .opacity(vm.isLeadingIn ? 1 : 0) // Hides text layout-neutrally if not leading in
                         .animation(.default, value: vm.isLeadingIn)
-                        .font(.system(size: geo.size.width * widthFactor))
                         .padding()
                         .frame(width: geo.size.width * 0.8, alignment: .center)
                         .background(.clear)
@@ -30,8 +29,7 @@ struct EMOMView: View {
                 }
                 HStack {
                     Spacer(minLength: geo.size.width * 0.1)
-                    Text("Sets to go: \(vm.setsToGo)")
-                        .font(.system(size: geo.size.width * widthFactor))
+                    Text("Minutes to go: \(vm.setsToGo)")
                         .padding()
                         .frame(width: geo.size.width * 0.8, alignment: .center)
                         .background(.thinMaterial)
@@ -48,7 +46,6 @@ struct EMOMView: View {
                 HStack {
                     Spacer(minLength: geo.size.width * 0.1)
                     Text("\(vm.time)")
-                        .font(.system(size: geo.size.width * widthFactor))
                         .alert("Finished!", isPresented: $vm.showingAlert) {
                             Button("Continue", role: .cancel) {
                                 vm.reset()
@@ -68,15 +65,15 @@ struct EMOMView: View {
                     Button("Start") {
                         vm.startSets(sets: vm.sets)
                     }
-                        .font(.system(size: geo.size.width * widthFactor))
                         .disabled(vm.isActive)
                     
                     Button("Reset", action: vm.reset)
-                        .font(.system(size: geo.size.width * widthFactor))
                         .tint(.red)
                 }
                 Spacer()
             }
+            .font(.system(size: geo.size.width * widthFactor))
+                        
             .onReceive(timer) { _ in
                 vm.updateLeadIn()
                 vm.updateCountdown()
@@ -85,8 +82,6 @@ struct EMOMView: View {
     }
 }
 
-struct EMOMView_Previews: PreviewProvider {
-    static var previews: some View {
-        EMOMView(totalSets: 10)
-    }
+#Preview {
+    EMOMView(totalSets: 10)
 }
