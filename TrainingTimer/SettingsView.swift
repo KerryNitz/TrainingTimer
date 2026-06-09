@@ -34,6 +34,16 @@ struct SettingsView: View {
         formatter.maximumFractionDigits = 0
         return formatter
     }()
+    
+    func retrieveValues() {
+        textRounds = "\($totalRounds.wrappedValue)"
+        textExercises = "\($totalExercises.wrappedValue)"
+        textTUT = "\($timeUnderTension.wrappedValue)"
+        textRest = "\($timeResting.wrappedValue)"
+        textSets = "\($totalSets.wrappedValue)"
+        textMinutes = "\($totalMinutes.wrappedValue)"
+        textLeadIn = "\($leadInTime.wrappedValue)"
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -44,6 +54,7 @@ struct SettingsView: View {
                         .padding(.all, paddingValue)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .background(.clear)
+                        .onAppear { retrieveValues() }
                     HStack {
                         Text("Lead-in Time (s):")
                             .padding(.all, paddingValue)
