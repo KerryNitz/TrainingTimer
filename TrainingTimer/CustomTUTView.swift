@@ -33,7 +33,7 @@ struct CustomTUTView: View {
                 }
                 HStack {
                     Spacer(minLength: geo.size.width * 0.1)
-                    Text("Sets to go: \(vm.setsToGo)")
+                    Text("Rounds to go: \(vm.roundsToGo)")
                         .padding()
                         .frame(width: geo.size.width * 0.8, alignment: .center)
                         .background(.thinMaterial)
@@ -66,7 +66,7 @@ struct CustomTUTView: View {
                 }
                 HStack(spacing:50) {
                     Button("Start") {
-                        vm.startSets(sets: vm.sets)
+                        vm.startRounds(rounds: vm.rounds)
                     }
                     .disabled(vm.isActive)
                     
