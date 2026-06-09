@@ -42,8 +42,21 @@ struct CustomTUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData($totalRounds.wrappedValue * $totalExercises.wrappedValue, activeTime: $timeUnderTension.wrappedValue, restTime: $timeResting.wrappedValue, leadInTime: $leadInTime.wrappedValue)
+                        .onAppear { vm.setData($totalRounds.wrappedValue, exercises: $totalExercises.wrappedValue, activeTime: $timeUnderTension.wrappedValue, restTime: $timeResting.wrappedValue, leadInTime: $leadInTime.wrappedValue)
                         }
+                    Spacer(minLength: geo.size.width * 0.1)
+                }
+                HStack {
+                    Spacer(minLength: geo.size.width * 0.1)
+                    Text("Current Exercise: \(vm.exerciseNumber)")
+                        .padding()
+                        .frame(width: geo.size.width * 0.8, alignment: .center)
+                        .background(.thinMaterial)
+                        .cornerRadius(20)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.gray, lineWidth: 4)
+                        )
                     Spacer(minLength: geo.size.width * 0.1)
                 }
                 HStack {
