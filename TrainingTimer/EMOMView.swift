@@ -40,7 +40,7 @@ struct EMOMView: View {
                                 .stroke(Color.gray, lineWidth: 4)
                         )
                         .onAppear {
-                            vm.setData(totalSets, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
+                            vm.setData(totalSets, leadInTime: $leadInTime.wrappedValue)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }

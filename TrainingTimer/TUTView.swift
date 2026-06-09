@@ -42,7 +42,7 @@ struct TUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData(Int($totalSets.wrappedValue) ?? 0, activeTime: activeTime, restTime: restTime, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
+                        .onAppear { vm.setData($totalSets.wrappedValue, activeTime: activeTime, restTime: restTime, leadInTime: $leadInTime.wrappedValue)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }

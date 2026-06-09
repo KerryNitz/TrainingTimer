@@ -42,7 +42,7 @@ struct CustomTUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData((Int($totalRounds.wrappedValue) ?? 0) * (Int($totalExercises.wrappedValue) ?? 0), activeTime: Int($timeUnderTension.wrappedValue) ?? 0, restTime: Int($timeResting.wrappedValue) ?? 0, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
+                        .onAppear { vm.setData($totalRounds.wrappedValue * $totalExercises.wrappedValue, activeTime: $timeUnderTension.wrappedValue, restTime: $timeResting.wrappedValue, leadInTime: $leadInTime.wrappedValue)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }

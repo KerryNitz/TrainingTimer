@@ -41,7 +41,7 @@ struct CustomEMOMView: View {
                                 .stroke(Color.gray, lineWidth: 4)
                         )
                         .onAppear {
-                            vm.setData(Int($totalMinutes.wrappedValue) ?? 0, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
+                            vm.setData($totalMinutes.wrappedValue, leadInTime: $leadInTime.wrappedValue)
                         }
                     Spacer(minLength: geo.size.width * 0.1)
                 }
