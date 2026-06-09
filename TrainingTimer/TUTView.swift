@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TUTView: View {
     @StateObject private var vm = TUTViewModel()
-    @AppStorage("totalSets") private var totalSets = "10"
-    @AppStorage("leadInTime") private var leadInTime = "10"
+    @AppStorage("totalSets") private var totalSets: Int = 10
+    @AppStorage("leadInTime") private var leadInTime: Int = 10
     
     let activeTime: Int
     let restTime: Int

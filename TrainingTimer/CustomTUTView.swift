@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CustomTUTView: View {
     @StateObject private var vm = CustomTUTViewModel()
-    @AppStorage("totalRounds") private var totalRounds = "4"
-    @AppStorage("totalExercises") private var totalExercises = "8"
-    @AppStorage("timeUnderTension") private var timeUnderTension = "30"
-    @AppStorage("timeResting") private var timeResting = "30"
-    @AppStorage("leadInTime") private var leadInTime = "10"
+    @AppStorage("totalRounds") private var totalRounds: Int = 4
+    @AppStorage("totalExercises") private var totalExercises: Int = 8
+    @AppStorage("timeUnderTension") private var timeUnderTension: Int = 30
+    @AppStorage("timeResting") private var timeResting: Int = 30
+    @AppStorage("leadInTime") private var leadInTime: Int = 10
     
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05

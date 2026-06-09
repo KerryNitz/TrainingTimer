@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EMOMView: View {
     @StateObject private var vm = EMOMViewModel()
-    @AppStorage("leadInTime") private var leadInTime = "10"
+    @AppStorage("leadInTime") private var leadInTime: Int = 10
     let totalSets: Int
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05

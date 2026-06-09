@@ -10,8 +10,8 @@ import SwiftUI
 
 struct CustomEMOMView: View {
     @StateObject private var vm = CustomEMOMViewModel()
-    @AppStorage("totalMinutes") private var totalMinutes = "30"
-    @AppStorage("leadInTime") private var leadInTime = "10"
+    @AppStorage("totalMinutes") private var totalMinutes: Int = 30
+    @AppStorage("leadInTime") private var leadInTime: Int = 10
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05
     
@@ -85,5 +85,5 @@ struct CustomEMOMView: View {
 }
 
 #Preview {
-    EMOMView(totalSets: 30)
+    CustomEMOMView()
 }
