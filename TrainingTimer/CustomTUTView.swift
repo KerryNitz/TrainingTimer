@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CustomTUTView: View {
     @StateObject private var vm = CustomTUTViewModel()
-    @AppStorage("totalRounds") private var totalRounds = "4"
-    @AppStorage("totalExercises") private var totalExercises = "8"
-    @AppStorage("timeUnderTension") private var timeUnderTension = "30"
-    @AppStorage("timeResting") private var timeResting = "30"
-    @AppStorage("leadInTime") private var leadInTime = "10"
+    @AppStorage("totalRounds") private var totalRounds: Int = 4
+    @AppStorage("totalExercises") private var totalExercises: Int = 8
+    @AppStorage("timeUnderTension") private var timeUnderTension: Int = 30
+    @AppStorage("timeResting") private var timeResting: Int = 30
+    @AppStorage("leadInTime") private var leadInTime: Int = 10
     
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let widthFactor: Double = 0.05
@@ -33,7 +33,7 @@ struct CustomTUTView: View {
                 }
                 HStack {
                     Spacer(minLength: geo.size.width * 0.1)
-                    Text("Sets to go: \(vm.setsToGo)")
+                    Text("Rounds to go: \(vm.roundsToGo)")
                         .padding()
                         .frame(width: geo.size.width * 0.8, alignment: .center)
                         .background(.thinMaterial)
@@ -42,8 +42,21 @@ struct CustomTUTView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.gray, lineWidth: 4)
                         )
-                        .onAppear { vm.setData((Int($totalRounds.wrappedValue) ?? 0) * (Int($totalExercises.wrappedValue) ?? 0), activeTime: Int($timeUnderTension.wrappedValue) ?? 0, restTime: Int($timeResting.wrappedValue) ?? 0, leadInTime: Int($leadInTime.wrappedValue) ?? 0)
+                        .onAppear { vm.setData($totalRounds.wrappedValue, exercises: $totalExercises.wrappedValue, activeTime: $timeUnderTension.wrappedValue, restTime: $timeResting.wrappedValue, leadInTime: $leadInTime.wrappedValue)
                         }
+                    Spacer(minLength: geo.size.width * 0.1)
+                }
+                HStack {
+                    Spacer(minLength: geo.size.width * 0.1)
+                    Text("Current Exercise: \(vm.exerciseNumber)")
+                        .padding()
+                        .frame(width: geo.size.width * 0.8, alignment: .center)
+                        .background(.thinMaterial)
+                        .cornerRadius(20)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.gray, lineWidth: 4)
+                        )
                     Spacer(minLength: geo.size.width * 0.1)
                 }
                 HStack {
@@ -66,7 +79,7 @@ struct CustomTUTView: View {
                 }
                 HStack(spacing:50) {
                     Button("Start") {
-                        vm.startSets(sets: vm.sets)
+                        vm.startRounds(rounds: vm.rounds)
                     }
                     .disabled(vm.isActive)
                     

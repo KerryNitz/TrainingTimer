@@ -13,12 +13,14 @@ extension CustomTUTView {
         @Published var isLeadingIn = false
         @Published var leadIn: String = "15"
         @Published var leadInSeconds: Int = 15
-        @Published var setsToGo: String = "10"
-        @Published var sets: Int = 10 {
+        @Published var roundsToGo: String = "4"
+        @Published var rounds: Int = 4 {
             didSet {
-                self.setsToGo = "\(sets)"
+                self.roundsToGo = "\(rounds)"
             }
         }
+        @Published var exercises: Int = 8
+        @Published var exerciseNumber: String = "1"
         @Published var isActive = false
         @Published var showingAlert = false
         @Published var time: String = "Go for 30"
@@ -29,15 +31,18 @@ extension CustomTUTView {
         }
         @Published var isRest = false
         @Published var rest: Int = 30
-        private var remainingSets: Int = 0
+        private var remainingRounds: Int = 0
         private var initialTime = 0
         private var initialRest = 0
         private var leadInTime = 0
         private var endDate = Date()
+        private var exerciseCount: Int = 0
         
-        func setData(_ totalSets: Int, activeTime: Int, restTime: Int, leadInTime: Int){
-            self.sets = totalSets
-            self.setsToGo = "\(totalSets)"
+        func setData(_ totalRounds: Int, exercises:Int, activeTime: Int, restTime: Int, leadInTime: Int){
+            self.rounds = totalRounds
+            self.roundsToGo = "\(totalRounds)"
+            self.exercises = exercises
+            self.exerciseNumber = "1"
             self.seconds = activeTime
             self.time = "Go for \(activeTime)"
             self.rest = restTime
@@ -45,9 +50,10 @@ extension CustomTUTView {
             self.leadIn = "\(leadInTime)"
         }
         
-        func startSets(sets: Int) {
-            self.remainingSets = sets
+        func startRounds(rounds: Int) {
+            self.remainingRounds = rounds
             self.initialRest = rest
+            exerciseCount += 1
             startLeadIn(seconds: leadInSeconds)
         }
 
@@ -57,6 +63,7 @@ extension CustomTUTView {
             self.endDate = Date()
             self.isLeadingIn = true
             self.endDate = Calendar.current.date(byAdding: .second, value: seconds, to: endDate)!
+            self.exerciseNumber = "\(Int(exerciseCount)) is next"
         }
 
         // Start the timer with the given amount of minutes
@@ -67,6 +74,7 @@ extension CustomTUTView {
             self.isRest = false
             self.endDate = Calendar.current.date(byAdding: .second, value: seconds, to: endDate)!
             self.time = "Go for \(seconds)"
+            self.exerciseNumber = "\(Int(exerciseCount))"
         }
         
         func startRest(seconds: Int) {
@@ -76,6 +84,12 @@ extension CustomTUTView {
             self.isRest = true
             self.endDate = Calendar.current.date(byAdding: .second, value: seconds, to: endDate)!
             self.time = "Resting for \(seconds)"
+            if exerciseCount == self.exercises {
+                exerciseCount = 1
+            } else {
+                exerciseCount += 1
+            }
+            self.exerciseNumber = "\(Int(exerciseCount)) is next"
         }
         
         // Reset the timer
@@ -88,8 +102,9 @@ extension CustomTUTView {
             self.isActive = false
             self.isRest = false
             self.time = "\(seconds)"
-            self.remainingSets = sets
-            self.setsToGo = "\(sets)"
+            self.remainingRounds = rounds
+            self.roundsToGo = "\(rounds)"
+            self.exerciseNumber = "1"
         }
         
         
@@ -139,13 +154,21 @@ extension CustomTUTView {
             
             // Checks that the countdown is not <= 0
             if endDate.timeIntervalSince1970 <= now.timeIntervalSince1970 {
-                if self.isRest {
-                    self.remainingSets -= 1
-                    self.setsToGo = "\(self.remainingSets)"
+                if self.isRest && exerciseCount == 1 {
+                    self.remainingRounds -= 1
+                    self.roundsToGo = "\(self.remainingRounds)"
                 }
-                if self.remainingSets > 0 {
+                if self.remainingRounds > 0 {
                     if self.isActive {
                         self.seconds = initialRest
+                        if self.remainingRounds == 1 && self.exerciseCount == self.exercises {
+                            self.isActive = false
+                            self.isRest = false
+                            self.time = "Go for 0"
+                            self.showingAlert = true
+                            self.exerciseNumber = "1"
+                            return
+                        }
                         startRest(seconds: self.seconds)
                     } else if self.isRest {
                         self.seconds = initialTime
@@ -156,6 +179,7 @@ extension CustomTUTView {
                     self.isRest = false
                     self.time = "Go for 0"
                     self.showingAlert = true
+                    self.exerciseNumber = "1"
                     return
                 }
             }
